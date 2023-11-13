@@ -1,0 +1,23 @@
+{
+  "name": "vue3-source-diff",
+  "version": "1.0.0",
+  "description": "A web module for source code comparison base on Vue3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/zhengjynicolas/vue3-source-diff"
+  },
+  "keywords": [
+    "vue3",
+    "diff",
+    "source",
+    "comparison",
+    "code",
+    "comparing"
+  ],
+  "author": "JoyZheng",
+  "license": "MIT"
+}
