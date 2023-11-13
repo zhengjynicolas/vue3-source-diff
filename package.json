@@ -2,22 +2,37 @@
   "name": "vue3-source-diff",
   "version": "1.0.0",
   "description": "A web module for source code comparison base on Vue3",
-  "main": "index.js",
+  "main": "./src/main.ts",
   "scripts": {
+    "build": "vue-cli-service build --target lib --name your-vue3-ts-npm-module src/components/SourceDiff.vue",
+    "prepare": "npm run build",
     "test": "test"
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/zhengjynicolas/vue3-source-diff"
+    "url": "https://github.com/zhengjynicolas/vue3-source-diff.git"
   },
   "keywords": [
-    "vue3",
-    "diff",
+    "Vue3",
+    "Diff",
     "source",
-    "comparison",
-    "code",
-    "comparing"
+    "code comparison",
+    "code compare",
+    "source compare",
+    "code diff",
+    "source diff"
   ],
   "author": "JoyZheng",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-diff": "^1.2.4"
+  },
+  "dependencies": {
+    "@vue/cli-service": "^5.0.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "vue-template-compiler": "^2.7.15"
+  }
 }
