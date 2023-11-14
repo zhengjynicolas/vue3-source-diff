@@ -49,6 +49,7 @@ const updateCurr = (newVal: string) => {
 </template>
 <style scoped>
 .source-diff-container {
+  width: 100vw;
   display: flex;
   flex-flow: column;
   gap: 2em;

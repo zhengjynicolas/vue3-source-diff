@@ -1,6 +1,6 @@
 {
   "name": "vue3-source-diff",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A web module for source code comparison base on Vue3",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
