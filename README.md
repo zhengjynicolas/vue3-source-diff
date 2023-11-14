@@ -9,6 +9,7 @@ npm install vue3-source-diff
 And install plugin in vue application
 ```ts
 import SourceDiff from 'vue3-source-diff';
+import 'vue3-source-diff/dist/index.css';
 
 app.use(SourceDiff);
 ```
