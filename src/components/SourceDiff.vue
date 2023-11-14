@@ -1,15 +1,58 @@
 <script setup lang="ts">
 import CodeEditor from "./CodeEditor.vue";
-const prev:string = ref("")
-const curr:string = ref("")
+import {ref, Ref} from "vue";
+import {Diff} from "vue-diff";
+const props = defineProps({
+  diffConf: {
+    default: {
+      mode: 'split',
+      theme: 'dark',
+      language: 'plaintext',
+      prev: '',
+      current: '',
+      folding: false,
+      inputDelay: 0,
+      virtualScroll: false,
+    }
+  },
+  prevLabel: String,
+  currLabel: String,
+})
+const prev: Ref<string> = ref(props.diffConf.prev)
+const curr: Ref<string> = ref(props.diffConf.current)
+const updatePrev = (newVal: string) => {
+  prev.value = newVal
+}
+const updateCurr = (newVal: string) => {
+  curr.value = newVal
+}
 </script>
 <template>
-  <div>
-    <h1>Source Code Comparison</h1>
-    <div>
-      <CodeEditor v-model="prev" label="Old Code"/>
-      <CodeEditor v-model="curr" label="New Code"/>
+  <section class="source-diff-container">
+    <div class="editor-container">
+      <CodeEditor v-model:code="prev" :label="prevLabel" @input="updatePrev"/>
+      <CodeEditor v-model:code="curr" :label="currLabel" @input="updateCurr"/>
     </div>
-    <VueDiff :prev="prev" :current="curr" />
-  </div>
+    <Diff
+        :prev="prev"
+        :current="curr"
+        :mode="diffConf.mode"
+        :theme="diffConf.theme"
+        :language="diffConf.language"
+        :folding="diffConf.folding"
+        :input-delay="diffConf.inputDelay"
+        :virtual-scroll="diffConf.virtualScroll"
+    />
+  </section>
 </template>
+<style scoped>
+.source-diff-container {
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+}
+.editor-container{
+  display: flex;
+  gap: 50px;
+}
+</style>
