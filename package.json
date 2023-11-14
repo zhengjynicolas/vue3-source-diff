@@ -23,7 +23,7 @@
     "Compare",
     "Code diff"
   ],
-  "author": "JoyZheng",
+  "author": "zhengjynicolas",
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.0.0"
