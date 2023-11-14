@@ -2,10 +2,12 @@
   "name": "vue3-source-diff",
   "version": "1.0.0",
   "description": "A web module for source code comparison base on Vue3",
-  "main": "src/main.ts",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-cli-service build --target lib --name your-vue3-ts-npm-module src/components/SourceDiff.vue",
+    "build": "vite build",
     "prepare": "npm run build",
     "test": "test"
   },
@@ -26,15 +28,20 @@
   "author": "JoyZheng",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^3.0.0",
-    "vue-diff": "^1.2.4"
+    "vue": "^3.0.0"
   },
   "dependencies": {
-    "@vue/cli-service": "^5.0.0",
-    "typescript": "^5.2.2"
+    "vue-diff": "^1.2.4"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/cli-service": "^5.0.0",
+    "@vue/compiler-sfc": "^3.3.8",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
     "vite": "^4.5.0",
-    "@vitejs/plugin-vue": "^4.4.0"
+    "vite-plugin-dts": "^3.6.3",
+    "vue-loader": "^17.3.1"
   }
 }
