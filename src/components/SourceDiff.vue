@@ -2,6 +2,8 @@
 import CodeEditor from "./CodeEditor.vue";
 import {ref, Ref} from "vue";
 import {Diff} from "vue-diff";
+import 'vue-diff/dist/index.css';
+
 const props = defineProps({
   diffConf: {
     default: {

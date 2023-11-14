@@ -11,8 +11,8 @@ declare module '@vue/runtime-core' {
 export default {
     install: (app: App, options = {}) => {
         const { componentName = 'SourceDiff' } = options as ComponentOptions;
-
         app.component(componentName, SourceDiff);
+
     },
 };
 
