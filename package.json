@@ -18,12 +18,10 @@
   "keywords": [
     "Vue3",
     "Diff",
-    "source",
-    "code comparison",
-    "code compare",
-    "source compare",
-    "code diff",
-    "source diff"
+    "Source Diff",
+    "Code Comparison",
+    "Compare",
+    "Code diff"
   ],
   "author": "JoyZheng",
   "license": "MIT",
